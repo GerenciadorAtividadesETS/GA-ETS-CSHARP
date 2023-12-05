@@ -2,6 +2,7 @@
 using GA_ETS.Data;
 using GA_ETS.DTO;
 using GA_ETS.Model;
+using GA_ETS.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,8 +38,9 @@ public class UsuarioController : ControllerBase
 
             return CreatedAtAction(nameof(DetalharUsuario), new { id = usuario.Id }, usuario);
         }
-        catch (DbUpdateException e)
+        catch (DbUpdateException error)
         {
+            Console.WriteLine("Error: " + error);
             return BadRequest("EDV já cadastrado no banco de dados");
         }
         
@@ -56,5 +58,13 @@ public class UsuarioController : ControllerBase
 
         var dadosUsuarioDTO = mapper.Map<DadosRetornoUsuario>(usuario);
         return Ok(dadosUsuarioDTO);
+    }
+
+    [HttpGet]
+    public IActionResult ListarTodasTurmas()
+    {
+        var service = new UsuarioService(this.context);
+        var turmas = service.ObterTurmasDistintas();
+        return Ok(turmas);
     }
 }

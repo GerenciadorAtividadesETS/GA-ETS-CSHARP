@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GA-ETS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ddcce7ab86c987ea323818e1563a32467d301b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25f760844a0b5aa9de4f61b3eff70d38e37739ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("GA-ETS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GA-ETS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

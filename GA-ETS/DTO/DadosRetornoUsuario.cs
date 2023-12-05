@@ -6,7 +6,7 @@ public class DadosRetornoUsuario
 {
     public int Id { get; set; }
     public int Turma { get; set; }
-    public int Edv { get; set; }
+    public string Edv { get; set; }
     public string Nome { get; set; }
     public string Cor { get; set; }
 }

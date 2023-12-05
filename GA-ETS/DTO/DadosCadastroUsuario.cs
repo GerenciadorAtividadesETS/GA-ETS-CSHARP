@@ -11,7 +11,7 @@ public class DadosCadastroUsuario
 
     [Required(ErrorMessage = "EDV é um campo obrigatório")]
     [RegularExpression(@"^\d{8}$", ErrorMessage = "EDV deve conter 8 números")]
-    public int Edv { get; set; }
+    public string Edv { get; set; }
 
     [Required(ErrorMessage = "Nome é um campo obrigatório")]
     public string Nome { get; set; }
